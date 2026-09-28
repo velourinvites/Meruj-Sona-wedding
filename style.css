@@ -1,0 +1,1298 @@
+/* =========================
+   GENERAL
+========================= */
+
+@font-face {
+    font-family: "Kotayq";
+    src: url("./fonts/Kotayk-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Arm Allegro U";
+    src: url(./fonts/ArmAllegroU.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4eee5;
+    color: #3e3933;
+    font-family: "Noto Sans Armenian", sans-serif;
+    src: url("./fonts/NotoSansArmenian-Black.ttf")
+}
+
+section {
+    width: 100%;
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #e9e0d3;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #5a5045;
+}
+
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image {
+    position: absolute;
+
+    inset: 0;
+
+    animation: heroZoom 12s ease-out forwards;
+}
+
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    
+
+    /*
+       Keep more of the upper part
+       of the portrait visible.
+    */
+
+    object-position: center 25%;
+}
+
+.hero-image::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   HERO OVERLAY
+========================= */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+          linear-gradient(
+            to bottom,
+            rgba(30, 25, 20, 0.12) 0%,
+            rgba(30, 25, 20, 0.18) 10%,
+            rgba(30, 25, 20, 0.35) 30%,
+            rgba(45, 38, 31, 0.72) 88%,
+            #5a5045 100%
+        );
+
+        
+}
+.hero-overlay-after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding-top: 280px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+
+    color: #ffffff;
+
+    animation:
+        heroText 1.8s ease forwards;
+}
+
+/* SMALL TEXT */
+
+.eyebrow {
+    font-family: "Noto Sans Armenian", sans-serif;
+
+    font-size: 12px;
+    font-weight: 200;
+
+    letter-spacing: 3px;
+    padding-top: 50px;
+    padding-bottom: 15px;
+
+    opacity: 0.95;
+}
+
+
+/* NAMES */
+
+.couple-names {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+}
+
+.couple-names span {
+    display: inline-block;
+}
+
+.ampersand {
+    font-size: 0.7em;
+}
+
+
+.hero h1 {
+    font-family: "Arm Allegro U", serif ;
+    src: url(./fonts/ArmAllegroU.ttf) format("truetype");
+    font-size: 120px;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.15;
+    letter-spacing: 2px;
+    text-shadow:
+        0 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* DATE */
+
+.wedding-date {
+    font-family: "Noto Sans Armenian", sans-serif;
+
+    margin-top: 50px;
+
+    font-size: 40px;
+    font-weight: 300;
+
+    letter-spacing: 7px;
+
+    opacity: 0.95;
+}
+
+
+/* =========================
+   SCROLL INDICATOR
+========================= */
+
+.hero::after {
+    content: "↓";
+
+    position: absolute;
+
+    bottom: 35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 2;
+
+    color: white;
+
+    font-size: 24px;
+    font-weight: 200;
+
+    animation: scrollArrow 2s ease-in-out infinite;
+}
+
+
+/* =========================
+   INVITATION
+========================= */
+
+.invitation {
+    position: relative;
+
+    min-height: 700px;
+
+    padding: 140px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #f4eee5;
+
+    overflow: hidden;
+}
+
+.invitation::before {
+    content: "";
+
+    position: absolute;
+
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+
+    border: 1px solid rgba(120, 105, 88, 0.25);
+
+    pointer-events: none;
+}
+
+
+
+
+/* DECORATIVE STAR */
+
+.invitation-decoration {
+    font-size: 22px;
+
+    margin-bottom: 35px;
+
+    color: #9b8b76;
+
+    opacity: 0.8;
+}
+
+
+/* SMALL LABEL */
+
+.section-label {
+    font-family: "Noto Sans Armenian", sans-serif;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 28px;
+
+    color: #756a5d;
+
+    opacity: 0.7;
+}
+
+
+/* MAIN TITLE */
+
+.invitation h2 {
+    font-family: "Noto Serif Armenian", serif;
+
+    font-size: clamp(38px, 7vw, 68px);
+
+    font-weight: 300;
+
+    line-height: 1.3;
+
+    margin-bottom: 40px;
+
+    color: #3e3831;
+}
+
+
+/* TEXT */
+
+.invitation-text {
+    max-width: 570px;
+
+    font-family: "Noto Sans Armenian", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 300;
+
+    line-height: 2;
+
+    color: #5d554c;
+
+    margin-bottom: 20px;
+}
+
+
+/* NAMES */
+
+.invitation-names {
+    margin-top: 45px;
+
+    font-family: "Noto Serif Armenian", serif;
+
+    font-size: 25px;
+
+    font-weight: 300;
+
+    letter-spacing: 2px;
+
+    color: #5b5146;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section {
+    padding: 110px 20px;
+    text-align: center;
+    background: #e9e0d3;
+}
+
+.countdown {
+    width: 100%;
+    max-width: 650px;
+    margin: 50px auto 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0;
+}
+
+.countdown-item {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-item span {
+    font-family: "Noto Serif Armenian", serif;
+
+    font-size: clamp(32px, 7vw, 65px);
+    font-weight: 300;
+    line-height: 1;
+}
+
+.countdown-item small {
+    margin-top: 12px;
+
+    font-family: "Noto Sans Armenian", sans-serif;
+
+    font-size: 10px;
+    letter-spacing: 1px;
+
+    opacity: 0.65;
+}
+
+/* =========================
+   PHOTO STORY
+========================= */
+
+.photo-story {
+    position: relative;
+
+    padding: 150px 7vw 180px;
+
+    background: #f4eee5;
+
+    overflow: hidden;
+}
+
+
+/* INTRO */
+
+.photo-story-intro {
+    max-width: 600px;
+
+    margin: 0 auto 100px;
+
+    text-align: center;
+}
+
+.photo-story-intro h2 {
+    font-family: "Noto Serif Armenian", serif;
+
+    font-size: clamp(40px, 7vw, 72px);
+
+    font-weight: 300;
+
+    line-height: 1.3;
+
+    color: #3e3831;
+}
+
+/* PHOTO GALLERY */
+
+.photo-gallery {
+
+    width: 100%;
+
+    height: 520px;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    gap: 20px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    padding: 25px calc((100% - 32vw) / 2);
+
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+
+}
+
+.photo-gallery::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.photo {
+
+    flex: 0 0 28vw;
+    width: 28vw;
+    height: 460px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    opacity: 0.55;
+    transform: scale(0.88);
+    scroll-snap-align: center;
+    transition:
+
+        transform 0.45s ease,
+
+        opacity 0.45s ease,
+
+        height 0.45s ease;
+
+}
+
+.photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+.photo.active {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    height: 520px;
+
+    z-index: 2;
+
+}
+
+.photo:not(.active):hover {
+
+    opacity: 0.85;
+
+    transform: scale(0.92);
+
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .photo-gallery {
+        height: 450px;
+        gap: 15px;
+    }
+
+    .photo {
+        flex-basis: 25%;
+        height: 340px;
+    }
+
+    .photo.active {
+        flex-basis: 45%;
+        height: 410px;
+    }
+}
+
+/* =========================
+   WEDDING TIMELINE
+========================= */
+
+.wedding-timeline {
+    position: relative;
+
+    padding: 140px 20px 160px;
+
+    background: #e9e0d3;
+
+    color: #4f463d;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.timeline-intro {
+    max-width: 600px;
+
+    margin: 0 auto 100px;
+
+    text-align: center;
+}
+
+
+.timeline-intro .eyebrow {
+    margin-bottom: 20px;
+
+    color: #8b7c6b;
+}
+
+
+.timeline-intro h2 {
+    margin: 0;
+
+    font-family: "Noto Serif Armenian", serif;
+
+    font-size: clamp(38px, 6vw, 65px);
+
+    font-weight: 300;
+
+    line-height: 1.2;
+}
+
+
+.timeline-intro-text {
+    max-width: 450px;
+
+    margin: 25px auto 0;
+
+    font-family: "Noto Sans Armenian", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    color: #75695c;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.timeline-location {
+    width: 100%;
+
+    padding: 20px 20px 45px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+
+.timeline-location.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* LOCATION ICON */
+
+.location-icon {
+    width: 64px;
+    height: 64px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.location-icon img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* LOCATION NAME */
+
+.timeline-location h3 {
+    margin: 0;
+
+    font-family: "Noto Serif Armenian", serif;
+    src: url(fonts/NotoSerifArmenian-VariableFont_wdth\,wght.ttf);
+
+    font-size: clamp(30px, 5vw, 45px);
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+/* LOCATION DESCRIPTION */
+
+.location-description {
+    margin: 15px 0 25px;
+
+    font-family: "Noto Sans Armenian", sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #776b5e;
+}
+
+
+/* MAP BUTTON */
+
+.location-button { display: inline-block;
+padding: 11px 28px;
+
+border: 1px solid #8b7c6b;
+
+border-radius: 30px;
+
+background: transparent;
+
+color: #655a4e;
+
+text-decoration: none;
+
+font-family: "Noto Sans Armenian", sans-serif;
+
+font-size: 12px;
+
+letter-spacing: 0.5px;
+
+transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.location-button:hover { 
+    background: #8b7c6b;
+    color: #f5efe6;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(101, 90, 78, 0.18);
+}
+
+
+/* PHONE / TOUCH */
+
+.location-button:active {
+
+    background-color: #8b7c6b;
+
+    color: #f5efe6;
+
+    transform: scale(0.97);
+
+}
+
+
+
+/* =========================
+   EVENTS
+========================= */
+
+.timeline-event {
+    width: 100%;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+.timeline-event.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* TIME */
+
+.event-time {
+    display: block;
+
+    font-family: "Noto Serif Armenian", serif;
+
+    font-size: clamp(40px, 7vw, 60px);
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    color: #a4937f;
+    margin: 20px;
+}
+
+
+/* EVENT TEXT */
+
+.event-title {
+    margin: 0px 50px;
+    padding-bottom: 10%;
+    font-family: "Noto Sans Armenian";
+    src: url(fonts/NotoSansArmenian-Bold.ttf);
+    font-size: 32px;
+
+    line-height: 1.7;
+
+    color: #5d544a;
+}
+
+.event-icon {
+    width: 200px;
+    height: 200px;
+
+    margin: 10px auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-icon img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.restaurant-icon {
+    width: 320px;
+    height: 170px;
+
+    margin: 10px auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.restaurant-icon img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.restaurant-icon svg{
+    stroke-width: 2.5;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heroZoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.06);
+    }
+
+}
+
+
+@keyframes heroText {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes scrollArrow {
+
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translate(-50%, 8px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+        opacity: 0.4;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    /* MOBILE HERO */
+  
+    .hero {
+        min-height: 650px;
+
+        height: 100svh;
+    }
+
+    
+
+    .hero-image img {
+
+        object-position: center center;
+    }
+
+
+    .hero-content {
+        padding: 30px 20px;
+        padding-top: 300px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+    .couple-names {
+    flex-direction: column;
+    gap: 5px;
+}
+
+.couple-names 
+.ampersand {
+    font-size: 0.5em;
+}
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .wedding-date {
+        font-size: 20px;
+
+        letter-spacing: 5px;
+
+        margin-top: 25px;
+    }
+
+    .invitation {
+        min-height: 500px;
+
+        padding: 90px 25px;
+    }
+
+    .invitation-text {
+        font-size: 15px;
+
+        line-height: 2;
+    }
+
+    /* MOBILE COUNTDOWN */
+    .countdown {
+        gap: 15px;
+    }
+
+    .countdown-item span {
+        font-size: 36px;
+    }
+
+
+    .invitation {
+        padding: 110px 55px;
+    }
+
+    .invitation::before {
+        top: 18px;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .invitation h2 {
+        font-size: 38px;
+    }
+
+    .invitation-text {
+        max-width: 320px;
+        font-size: 15px;
+        line-height: 2;
+    }
+
+     .countdown {
+        width: 100%;
+    }
+
+    .countdown-item span {
+        font-size: 30px;
+    }
+
+    .countdown-item small {
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+
+
+
+/* MOBILE GALLERY */
+.photo-gallery {
+
+    height: auto;
+
+    min-height: 430px;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    gap: 10px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    padding: 25px 22vw;
+
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+
+}
+
+.photo-gallery::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.photo {
+
+    flex: 0 0 56vw;
+
+    width: 56vw;
+
+    height: 350px;
+
+    opacity: 0.55;
+
+    transform: scale(0.88);
+
+    scroll-snap-align: center;
+
+    transition:
+
+        transform 0.45s ease,
+
+        opacity 0.45s ease,
+
+        height 0.45s ease;
+
+}
+
+.photo.active {
+
+    flex: 0 0 56vw;
+
+    width: 56vw;
+
+    height: 380px;
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    z-index: 2;
+
+}
+
+.photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.photo:hover {
+
+    transform: scale(0.88);
+
+}
+
+.photo.active:hover {
+
+    transform: scale(1);
+
+}
+
+/* =========================
+   MOBILE TIMELINE
+========================= */
+
+.wedding-timeline {
+    padding: 100px 18px 120px;
+}
+
+
+.timeline-intro {
+    margin-bottom: 75px;
+}
+
+
+.timeline-intro h2 {
+    font-size: 38px;
+}
+
+
+.timeline-intro-text {
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+.timeline-location {
+    padding-bottom: 35px;
+}
+
+
+.timeline-location h3 {
+    font-size: 30px;
+}
+
+
+.location-description {
+    font-size: 12px;
+}
+
+
+.location-button {
+    padding: 10px 20px;
+
+    font-size: 10px;
+}
+
+
+.timeline-line {
+    height: 80px;
+}
+
+
+.timeline-event {
+    padding: 28px 15px;
+}
+
+
+.event-time {
+    font-size: 42px;
+    margin: 20px;
+}
+
+
+.event-title {
+    font-size: 23px;
+}
+
+
+}
+
+
+
+
+/* ========================= MUSIC BUTTON ========================= */
+#musicButton { 
+position: fixed ;
+width: 48px ;
+height: 48px ;
+
+right: 20px ;
+bottom: 20px ;
+
+display: flex;
+align-items: center ;
+justify-content: center ;
+
+padding: 0 ;
+margin: 0 ;
+
+border: 1px solid #8b7c6b ;
+border-radius: 50% ;
+
+background: #e9e0d3;
+color: #655a4e ;
+
+font-size: 20px ;
+line-height: 1 ;
+
+opacity: 1 ;
+visibility: visible ;
+
+pointer-events: auto ;
+
+position: fixed ;
+
+z-index: 2147483647 ;
+
+cursor: pointer;
+}
+/* HOVER */
+#musicButton:hover { background: #8b7c6b ; color: #f5efe6 ; }
+/* MOBILE */
+@media (max-width: 600px) {
+#musicButton {
+    width: 45px;
+    height: 45px;
+
+    right: 18px;
+    bottom: 18px;
+
+    display: flex ;
+
+    z-index: 2147483647 ;
+}
+}
+
