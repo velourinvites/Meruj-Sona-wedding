@@ -1,6 +1,6 @@
 
 /* COUNTDOWN */
-
+/*
 const weddingCountdownDate = new Date("October 18, 2026 17:30:00").getTime();
 
 function updateCountdown() {
@@ -49,7 +49,7 @@ updateCountdown();
 
 setInterval(updateCountdown, 1000);
 
-
+*/
 
 
 

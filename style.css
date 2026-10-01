@@ -280,7 +280,7 @@ section {
 
     text-align: center;
 
-    background: #f4eee5;
+    background: #e9e0d3;
 
     overflow: hidden;
 }
@@ -390,7 +390,7 @@ section {
 /* =========================
    COUNTDOWN
 ========================= */
-
+/*
 .countdown-section {
     padding: 110px 20px;
     text-align: center;
@@ -437,6 +437,8 @@ section {
 
     opacity: 0.65;
 }
+
+*/
 
 /* =========================
    PHOTO STORY
@@ -1027,7 +1029,7 @@ transition:
         line-height: 2;
     }
 
-    /* MOBILE COUNTDOWN */
+    /* MOBILE COUNTDOWN 
     .countdown {
         gap: 15px;
     }
@@ -1035,6 +1037,7 @@ transition:
     .countdown-item span {
         font-size: 36px;
     }
+        */
 
 
     .invitation {
